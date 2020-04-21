@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.wd.tech"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    //recycelrview，列表控件，和listview差不多，升级版
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation 'com.github.tongchexinfeitao:QRCodeLibrary:1.0'
+
+    //okhttp日志拦截器
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
+
+    //retrofit核心库
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+
+    //retrofit辅助 ，gson解析的库
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.2'
+
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'//切换到主线程的依赖
+
+    //SmartRefresh 上下拉刷新框架
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+
+    //androidx版本  Tablayout依赖 :
+    implementation 'com.android.support:design:29.0.0'
+
+
+//卡片布局
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+
+    //xbanner
+    implementation 'com.github.xiaohaibin:XBanner:androidx_v1.0.2'
+
+
+//glide
+    implementation("com.github.bumptech.glide:glide:4.10.0") {
+        exclude group: "com.android.support"
+    }
+
+    //frescoy图片加载依赖
+    implementation 'com.facebook.fresco:fresco:1.12.0'
+
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+    //抽屉
+    implementation 'com.yinglan.scrolllayout:scrolllayout:1.0.2'
+
+    //节操
+    implementation 'fm.jiecao:jiecaovideoplayer:5.5.2'
+
+    //xrecyview
+    implementation 'com.jcodecraeer:xrecyclerview:1.5.9'
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //xrecyview
+    implementation 'com.jcodecraeer:xrecyclerview:1.5.9'
+}
