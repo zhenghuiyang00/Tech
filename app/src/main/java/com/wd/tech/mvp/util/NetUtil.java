@@ -31,6 +31,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetUtil {
 
+
+
     private SharedPreferences yan;
     private final ApiService apiService;
     private String userId;
